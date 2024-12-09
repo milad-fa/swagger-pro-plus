@@ -1,0 +1,50 @@
+/* تنظیم فونت برای همه المان‌ها */
+* {
+    font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* تنظیم کل محتوا به صورت چپ‌چین (حالت پیش‌فرض) */
+.swagger-ui {
+    direction: ltr;
+    text-align: left;
+}
+
+/* فقط محتوای renderedMarkdown راست‌چین */
+.swagger-ui .renderedMarkdown {
+    direction: rtl;
+    text-align: right;
+}
+
+/* تنظیم فونت برای همه المان‌های مهم */
+.swagger-ui .title,
+.swagger-ui .opblock-tag,
+.swagger-ui .opblock-summary-method,
+.swagger-ui .opblock-summary-path,
+.swagger-ui .opblock-description-wrapper p,
+.swagger-ui .parameters-col_name,
+.swagger-ui .response-col_status,
+.swagger-ui .response-col_description,
+.swagger-ui table thead tr th,
+.swagger-ui table tbody tr td,
+.swagger-ui .btn,
+.swagger-ui select,
+.swagger-ui input,
+.swagger-ui label,
+.swagger-ui .markdown p,
+.swagger-ui .markdown li {
+    font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* اندازه و وزن فونت برای بخش‌های مختلف */
+.swagger-ui .opblock-tag {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.swagger-ui .opblock-summary-method {
+    font-weight: 600 !important;
+}
+
+.swagger-ui .parameters-col_name {
+    font-weight: 500 !important;
+}
