@@ -6,13 +6,16 @@
     <title>API</title>
     <link rel="stylesheet" type="text/css" href="/swagger-ui/swagger-ui.css">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-
     <link rel="stylesheet" type="text/css" href="/css/swagger-custom.css">
 </head>
 <body>
 <div id="swagger-ui"></div>
 <script src="/swagger-ui/swagger-ui-bundle.js"></script>
 <script src="/swagger-ui/swagger-ui-standalone-preset.js"></script>
+<script src="/js/i18n-config.js"></script>
+<script src="/js/swagger-custom.js"></script>
+<script src="/js/last-five.js"></script>
+<script src="/js/request.js"></script>
 <script>
     window.onload = function() {
         window.ui = SwaggerUIBundle({
@@ -31,8 +34,5 @@
         });
     };
 </script>
-<script src="/js/swagger-custom.js"></script>
-<script src="/js/last-five.js"></script>
-<script src="/js/request.js"></script>
 </body>
 </html>

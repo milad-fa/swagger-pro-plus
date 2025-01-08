@@ -1,6 +1,5 @@
-// swagger-history.js
-(function() {
-    // Wait for Swagger UI to load completely
+
+(function () {
     const waitForSwaggerUI = setInterval(() => {
         if (window.ui) {
             clearInterval(waitForSwaggerUI);
@@ -9,8 +8,7 @@
     }, 100);
 
     function initializeHistoryManager() {
-        // Listen only for Try it out button clicks
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             if (event.target.classList.contains('try-out__btn')) {
                 const operationDOM = event.target.closest('.opblock');
                 if (operationDOM) {
@@ -53,7 +51,7 @@
         if (history.length === 0) {
             const emptyMessage = document.createElement('div');
             emptyMessage.style.color = '#666';
-            emptyMessage.textContent = 'تاریخچه‌ای موجود نیست';
+            emptyMessage.textContent = window.i18n.getText('noHistoryMessage');
             container.appendChild(emptyMessage);
         } else {
             history.forEach((entry, index) => {
@@ -61,7 +59,6 @@
             });
         }
 
-        // Insert into opblock-section-header
         const headerSection = operationDOM.querySelector('.opblock-section-header');
         if (headerSection) {
             headerSection.appendChild(container);
@@ -112,9 +109,9 @@
         const today = new Date();
 
         if (date.toDateString() === today.toDateString()) {
-            return date.toLocaleTimeString('fa-IR', { hour: '2-digit', minute: '2-digit' });
+            return date.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'});
         }
-        return date.toLocaleDateString('fa-IR', {
+        return date.toLocaleDateString('en-US', {
             month: 'numeric',
             day: 'numeric',
             hour: '2-digit',
@@ -139,14 +136,11 @@
 
     function saveRequestData(operationId, operationDOM) {
         const parameters = {};
-
-        // Get body parameter
         const bodyTextarea = operationDOM.querySelector('.body-param__text');
         if (bodyTextarea && bodyTextarea.value) {
             parameters.body = bodyTextarea.value;
         }
 
-        // Get other parameters
         operationDOM.querySelectorAll('.parameters tr').forEach(row => {
             const nameCell = row.querySelector('.parameters-col_name');
             const valueCell = row.querySelector('.parameters-col_description input, .parameters-col_description select');
@@ -155,19 +149,13 @@
             }
         });
 
-        // Don't save if no parameters
         if (Object.keys(parameters).length === 0) return;
-
         const history = JSON.parse(localStorage.getItem(`swagger_history_${operationId}`) || '[]');
-
-        // Check for duplicates
         if (!history.some(entry => JSON.stringify(entry.parameters) === JSON.stringify(parameters))) {
             history.unshift({
                 timestamp: new Date().toISOString(),
                 parameters: parameters
             });
-
-            // Keep only last 5 entries
             if (history.length > 5) history.pop();
 
             localStorage.setItem(`swagger_history_${operationId}`, JSON.stringify(history));
@@ -176,16 +164,14 @@
     }
 
     function restoreParameters(parameters, operationDOM) {
-        // Restore body parameter
         if (parameters.body) {
             const bodyTextarea = operationDOM.querySelector('.body-param__text');
             if (bodyTextarea) {
                 bodyTextarea.value = parameters.body;
-                bodyTextarea.dispatchEvent(new Event('change', { bubbles: true }));
+                bodyTextarea.dispatchEvent(new Event('change', {bubbles: true}));
             }
         }
 
-        // Restore other parameters
         Object.entries(parameters).forEach(([name, value]) => {
             if (name !== 'body') {
                 const row = Array.from(operationDOM.querySelectorAll('.parameters tr'))
@@ -195,7 +181,7 @@
                     const input = row.querySelector('.parameters-col_description input, .parameters-col_description select');
                     if (input) {
                         input.value = value;
-                        input.dispatchEvent(new Event('change', { bubbles: true }));
+                        input.dispatchEvent(new Event('change', {bubbles: true}));
                     }
                 }
             }

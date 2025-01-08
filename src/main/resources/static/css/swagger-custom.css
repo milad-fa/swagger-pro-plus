@@ -1,21 +1,22 @@
-/* تنظیم فونت برای همه المان‌ها */
 * {
     font-family: 'Vazirmatn', sans-serif !important;
 }
 
-/* تنظیم کل محتوا به صورت چپ‌چین (حالت پیش‌فرض) */
 .swagger-ui {
     direction: ltr;
     text-align: left;
 }
 
-/* فقط محتوای renderedMarkdown راست‌چین */
+[dir="rtl"] .swagger-ui {
+    direction: rtl;
+    text-align: right;
+}
+
 .swagger-ui .renderedMarkdown {
     direction: rtl;
     text-align: right;
 }
 
-/* تنظیم فونت برای همه المان‌های مهم */
 .swagger-ui .title,
 .swagger-ui .opblock-tag,
 .swagger-ui .opblock-summary-method,
@@ -35,7 +36,6 @@
     font-family: 'Vazirmatn', sans-serif !important;
 }
 
-/* اندازه و وزن فونت برای بخش‌های مختلف */
 .swagger-ui .opblock-tag {
     font-size: 24px !important;
     font-weight: 700 !important;
@@ -47,4 +47,53 @@
 
 .swagger-ui .parameters-col_name {
     font-weight: 500 !important;
+}
+
+[dir="rtl"] .swagger-ui .opblock-summary {
+    direction: rtl;
+}
+
+[dir="rtl"] .swagger-ui .opblock-summary-method {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .swagger-ui .opblock-summary-path,
+[dir="rtl"] .swagger-ui .parameters-col_name,
+[dir="rtl"] .swagger-ui .parameters-col_description,
+[dir="rtl"] .swagger-ui .response-col_status {
+    text-align: right;
+}
+
+[dir="rtl"] .swagger-ui input[type="text"],
+[dir="rtl"] .swagger-ui textarea {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .swagger-ui .model,
+[dir="rtl"] .swagger-ui table,
+[dir="rtl"] .swagger-ui .parameters-container,
+[dir="rtl"] .swagger-ui .opblock-description-wrapper {
+    direction: rtl;
+}
+
+[dir="rtl"] .swagger-ui .model-toggle {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .swagger-ui .try-out__btn {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .swagger-ui .response-col_description__inner {
+    padding-right: 10px;
+    padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .swagger-ui .opblock-summary {
+        flex-direction: row-reverse;
+    }
 }

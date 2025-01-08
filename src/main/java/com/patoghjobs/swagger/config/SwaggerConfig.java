@@ -63,7 +63,6 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 </script>
                 """.formatted(applicationName, applicationVersion);
 
-        // Log to console that injection occurred
         System.out.println("JavaScript logging code injected");
     }
 

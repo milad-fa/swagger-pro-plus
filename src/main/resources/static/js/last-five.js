@@ -1,5 +1,4 @@
-(function() {
-    // اضافه کردن استایل‌ها
+(function () {
     const styles = document.createElement('style');
     styles.textContent = `
         .recent-services-wrapper {
@@ -107,34 +106,33 @@
     `;
     document.head.appendChild(styles);
 
-    // اضافه کردن HTML
     const container = document.createElement('div');
-    container.innerHTML = `
-        <div class="recent-services-wrapper">
-            <div class="drag-handle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M8 6h8M8 12h8M8 18h8"></path>
-                </svg>
-            </div>
-            <button class="recent-services-trigger">آخرین سرویس‌ها</button>
-        </div>
-        <div class="recent-services-popup">
-            <div class="popup-header">
-                <h3>آخرین سرویس‌های استفاده شده</h3>
-                <button class="close-popup" style="border: none; background: none; cursor: pointer;">✕</button>
-            </div>
-            <div class="popup-content">
-                <div class="services-list"></div>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(container);
 
-    // فانکشن اصلی برای پیدا کردن و رفتن به endpoint
+    container.innerHTML = `
+    <div class="recent-services-wrapper">
+        <div class="drag-handle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 6h8M8 12h8M8 18h8"></path>
+            </svg>
+        </div>
+        <button class="recent-services-trigger" data-i18n="recentServicesButton"></button>
+    </div>
+    <div class="recent-services-popup">
+        <div class="popup-header">
+            <h3 data-i18n="recentServicesTitle"></h3>
+            <button class="close-popup" style="border: none; background: none; cursor: pointer;">✕</button>
+        </div>
+        <div class="popup-content">
+            <div class="services-list"></div>
+        </div>
+    </div>
+`;
+
+    document.body.appendChild(container);
+    window.i18n.updateAllTexts();
     async function navigateToSwagger(path) {
         console.log('Looking for:', path);
 
-        // باز کردن همه تگ‌های بسته
         function openAllTags() {
             const closedTags = Array.from(document.querySelectorAll('.opblock-tag-section:not(.is-open) .opblock-tag'));
             console.log('Found closed tags:', closedTags.length);
@@ -148,11 +146,11 @@
                     closedTags[index].click();
                     setTimeout(() => openNext(index + 1), 100);
                 }
+
                 openNext();
             });
         }
 
-        // باز کردن تگ‌ها و پیدا کردن endpoint
         await openAllTags();
 
         const pathElement = document.querySelector(`[data-path="${path}"]`);
@@ -187,17 +185,13 @@
         return false;
     }
 
-    // مدیریت سرویس‌های اخیر
     function addRecentService(path) {
         let services = JSON.parse(localStorage.getItem('recent_services') || '[]');
 
-        // حذف اگر قبلاً وجود دارد
         services = services.filter(s => s !== path);
 
-        // اضافه کردن به ابتدای لیست
         services.unshift(path);
 
-        // نگه داشتن فقط 5 مورد آخر
         services = services.slice(0, 5);
 
         localStorage.setItem('recent_services', JSON.stringify(services));
@@ -209,7 +203,7 @@
         const servicesList = document.querySelector('.services-list');
 
         if (services.length === 0) {
-            servicesList.innerHTML = '<div style="text-align: center; color: #666;">هیچ سرویسی ذخیره نشده است</div>';
+            servicesList.innerHTML = `<div style="text-align: center; color: #666;">${window.i18n.getText('noServicesMessage')}</div>`;
             return;
         }
 
@@ -217,14 +211,13 @@
             <div class="service-item">
                 <div class="service-info">${service}</div>
                 <div class="service-actions">
-                    <button class="go-service" onclick="window.goToService('${service}')">برو</button>
-                    <button class="delete-service" onclick="window.deleteService(${index})">حذف</button>
+                    <button class="go-service" onclick="window.goToService('${service}')">${window.i18n.getText('goToServiceButton')}</button>
+                    <button class="delete-service" onclick="window.deleteService(${index})">${window.i18n.getText('deleteServiceButton')}</button>
                 </div>
             </div>
         `).join('');
     }
 
-    // تنظیم event listeners
     const popup = document.querySelector('.recent-services-popup');
     const trigger = document.querySelector('.recent-services-trigger');
     const closeBtn = document.querySelector('.close-popup');
@@ -244,7 +237,6 @@
         }
     });
 
-    // مانیتور کردن دکمه execute
     function monitorExecuteButtons() {
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
@@ -272,21 +264,18 @@
         });
     }
 
-    // توابع گلوبال برای استفاده
-    window.goToService = function(path) {
+    window.goToService = function (path) {
         navigateToSwagger(path);
     };
 
-    window.deleteService = function(index) {
+    window.deleteService = function (index) {
         const services = JSON.parse(localStorage.getItem('recent_services') || '[]');
         services.splice(index, 1);
         localStorage.setItem('recent_services', JSON.stringify(services));
         loadRecentServices();
     };
 
-    // شروع مانیتورینگ
     monitorExecuteButtons();
 
-    // لود اولیه سرویس‌ها
     loadRecentServices();
 })();

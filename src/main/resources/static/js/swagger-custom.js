@@ -1,4 +1,4 @@
-(function() {
+(function () {
     const styles = document.createElement('style');
     styles.textContent = `
         @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
@@ -175,26 +175,26 @@
                     <path d="M8 6h8M8 12h8M8 18h8"></path>
                 </svg>
             </div>
-            <button class="token-manager-trigger">مدیریت توکن</button>
+            <button class="token-manager-trigger" data-i18n="tokenManagerTitle">مدیریت توکن</button>
         </div>
         <div class="token-manager-popup">
             <div class="popup-header">
-                <h3>مدیریت توکن‌ها</h3>
+                <h3 data-i18n="tokenManagerTitle"></h3>
                 <button class="close-popup" style="border: none; background: none; cursor: pointer;">✕</button>
             </div>
-            <div class="popup-content">
-                <div class="token-form">
-                    <input type="text" class="token-name" placeholder="نام توکن">
-                    <input type="text" class="token-input" placeholder="توکن را وارد کنید">
-                    <button class="save-token">ذخیره توکن</button>
-                </div>
-                <div class="saved-tokens"></div>
-            </div>
+           <div class="popup-content">
+   <div class="token-form">
+       <input type="text" class="token-name" data-i18n-placeholder="tokenNamePlaceholder" placeholder="نام توکن">
+       <input type="text" class="token-input" data-i18n-placeholder="tokenInputPlaceholder" placeholder="توکن را وارد کنید">
+       <button data-i18n="saveTokenButton" class="save-token">ذخیره توکن</button>
+   </div>
+   <div class="saved-tokens"></div>
+</div>
         </div>
     `;
     document.body.appendChild(container);
+    window.i18n.updateAllTexts();
 
-    // Elements
     const wrapper = document.querySelector('.token-manager-wrapper');
     const popup = document.querySelector('.token-manager-popup');
     const trigger = document.querySelector('.token-manager-trigger');
@@ -204,7 +204,6 @@
     const saveButton = document.querySelector('.save-token');
     const savedTokensContainer = document.querySelector('.saved-tokens');
 
-    // Drag functionality
     let isDragging = false;
     let currentX;
     let currentY;
@@ -236,7 +235,6 @@
             yOffset = currentY;
 
             setTranslate(currentX, currentY, wrapper);
-            // Update popup position when dragging
             updatePopupPosition();
         }
     }
@@ -257,7 +255,7 @@
         popup.style.top = `${wrapperRect.bottom + 10}px`;
     }
 
-    // Popup toggle
+
     trigger.addEventListener('click', (e) => {
         e.stopPropagation();
         popup.classList.toggle('active');
@@ -270,14 +268,14 @@
     });
 
 
-    // Click outside
+
     document.addEventListener('click', (e) => {
-        // اگر پاپ‌آپ بسته است، کاری نکن
+
         if (!popup.classList.contains('active')) {
             return;
         }
 
-        // اگر کلیک روی خود پاپ‌آپ، دکمه‌های داخلش، یا trigger بود، کاری نکن
+
         if (popup.contains(e.target) ||
             trigger.contains(e.target) ||
             e.target.closest('.use-token') ||
@@ -286,11 +284,9 @@
             return;
         }
 
-        // در غیر این صورت، پاپ‌آپ رو ببند
         popup.classList.remove('active');
     });
 
-    // Token management functions
     function generateColor() {
         const colors = [
             '#1976D2', '#D32F2F', '#388E3C', '#7B1FA2',
@@ -309,7 +305,7 @@
 
     saveButton.addEventListener('click', () => {
         if (!tokenInput.value || !tokenName.value) {
-            alert('لطفا توکن و نام آن را وارد کنید');
+            alert(window.i18n.getText('tokenValidationError'));
             return;
         }
 
@@ -332,18 +328,20 @@
         const activeToken = JSON.parse(localStorage.getItem('active_token') || 'null');
 
         savedTokensContainer.innerHTML = tokens.map((token, index) => `
-            <div class="token-item ${activeToken?.name === token.name ? 'active' : ''}">
-                <div class="token-color" style="background-color: ${token.color}"></div>
-                <div class="token-info">${token.name}</div>
-                <div class="token-actions">
-                    <button class="use-token" onclick="useToken(${index})">استفاده</button>
-                    <button class="delete-token" onclick="deleteToken(${index})">حذف</button>
-                </div>
-            </div>
-        `).join('');
+    <div class="token-item ${activeToken?.name === token.name ? 'active' : ''}">
+        <div class="token-color" style="background-color: ${token.color}"></div>
+        <div class="token-info">${token.name}</div>
+        <div class="token-actions">
+            <button class="use-token" onclick="useToken(${index})" data-i18n="useTokenButton"></button>
+            <button class="delete-token" onclick="deleteToken(${index})" data-i18n="deleteTokenButton"></button>
+        </div>
+    </div>
+`).join('');
     }
 
-    window.useToken = function(index) {
+    window.i18n.updateAllTexts();
+
+    window.useToken = function (index) {
         const tokens = JSON.parse(localStorage.getItem('swagger_tokens') || '[]');
         const token = tokens[index];
 
@@ -360,20 +358,19 @@
         }
 
         loadSavedTokens();
-        // پاپ‌آپ رو باز نگه می‌داریم
     };
 
-    window.deleteToken = function(index) {
+    window.deleteToken = function (index) {
         const button = event.target;
         const originalText = button.textContent;
 
         if (!button.clickCount) {
             button.clickCount = 1;
-            button.textContent = 'دوبار دیگر کلیک کنید';
+            button.textContent = window.i18n.getText('deleteConfirmMessage1');
             button.style.background = '#ff9800';
         } else if (button.clickCount === 1) {
             button.clickCount = 2;
-            button.textContent = 'یکبار دیگر کلیک کنید';
+            button.textContent = window.i18n.getText('deleteConfirmMessage2');
             button.style.background = '#ff5722';
         } else {
             const tokens = JSON.parse(localStorage.getItem('swagger_tokens') || '[]');
@@ -401,7 +398,7 @@
         }, 3000);
     };
 
-    // Initial load
+
     loadSavedTokens();
 
     const activeToken = JSON.parse(localStorage.getItem('active_token') || 'null');
