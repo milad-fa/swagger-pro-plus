@@ -288,11 +288,27 @@
     });
 
     function generateColor() {
-        const colors = [
-            '#1976D2', '#D32F2F', '#388E3C', '#7B1FA2',
-            '#F57C00', '#00796B', '#303F9F', '#C2185B'
+        const predefinedColors = [
+            '#1976D2',
+            '#388E3C',
+            '#7B1FA2',
+            '#F57C00',
+            '#00796B',
+            '#303F9F',
+            '#C2185B',
+            '#FBC02D',
+            '#455A64'
         ];
-        return colors[Math.floor(Math.random() * colors.length)];
+
+        const tokens = JSON.parse(localStorage.getItem('swagger_tokens') || '[]');
+        const usedColors = tokens.map(token => token.color);
+        const availableColors = predefinedColors.filter(color => !usedColors.includes(color));
+
+        if (availableColors.length > 0) {
+            return availableColors[Math.floor(Math.random() * availableColors.length)];
+        }
+
+        return predefinedColors[Math.floor(Math.random() * predefinedColors.length)];
     }
 
     function updateFavicon(color) {

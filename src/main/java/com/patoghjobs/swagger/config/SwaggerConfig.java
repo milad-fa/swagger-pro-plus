@@ -73,7 +73,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                         .title("Swagger Pro Plus")
                         .version("1.0.0")
                         .description("Enhanced Swagger UI with custom token management and smart request history capabilities")
-                        .termsOfService("https://patoghjobs.com/terms")
+                        .termsOfService("https://patoghjobs.com/swagger-terms.html")
                         .contact(new Contact()
                                 .name("Development Team")
                                 .email("dev@patoghjobs.com")
