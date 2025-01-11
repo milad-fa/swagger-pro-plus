@@ -51,6 +51,7 @@
         if (history.length === 0) {
             const emptyMessage = document.createElement('div');
             emptyMessage.style.color = '#666';
+            emptyMessage.setAttribute('data-i18n', 'noHistoryMessage');
             emptyMessage.textContent = window.i18n.getText('noHistoryMessage');
             container.appendChild(emptyMessage);
         } else {

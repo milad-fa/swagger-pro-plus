@@ -321,6 +321,7 @@
         tokenInput.value = '';
         tokenName.value = '';
         loadSavedTokens();
+        window.i18n.updateAllTexts();
     });
 
     function loadSavedTokens() {
@@ -358,6 +359,7 @@
         }
 
         loadSavedTokens();
+        window.i18n.updateAllTexts();
     };
 
     window.deleteToken = function (index) {
@@ -388,6 +390,7 @@
             tokens.splice(index, 1);
             localStorage.setItem('swagger_tokens', JSON.stringify(tokens));
             loadSavedTokens();
+            window.i18n.updateAllTexts();
             return;
         }
 
