@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/screenshot.png" alt="SwaggerProPlus Screenshot" width="800"/>
+  <img src="src/docs/images/screenshot.png" alt="SwaggerProPlus Screenshot" width="800"/>
 </p>
 
 <h1 align="center">SwaggerProPlus</h1>
@@ -8,12 +8,12 @@
 </p>
 
 <p align="center">
-  <a href="docs/README_en.md">English</a> |
-  <a href="docs/README_fa.md">فارسی</a> |
-  <a href="docs/README_ar.md">العربية</a> |
-  <a href="docs/README_az.md">Azərbaycan</a> |
-  <a href="docs/README_ru.md">Русский</a> |
-  <a href="docs/README_tr.md">Türkçe</a>
+  <a href="src/docs/README_en.md">English</a> |
+  <a href="src/docs/README_fa.md">فارسی</a> |
+  <a href="src/docs/README_ar.md">العربية</a> |
+  <a href="src/docs/README_az.md">Azərbaycan</a> |
+  <a href="src/docs/README_ru.md">Русский</a> |
+  <a href="src/docs/README_tr.md">Türkçe</a>
 </p>
 
 ## Online Demo
