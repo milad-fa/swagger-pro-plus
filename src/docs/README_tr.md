@@ -24,8 +24,8 @@ SwaggerProPlus, Swagger UI'ya akıllı özellikler ekleyerek API deneyimini dön
 - **Daha İyi Yönetim**: Çalışma ortamlarının net ayrımı
 - **Zaman Tasarrufu**: Token yönetiminde %60 zaman tasarrufu
 
-![Token Yönetim Paneli](/docs/images/screenshots/token/token-manager-panel-tr.png)
-![Token Renk Göstergesi](/docs/images/screenshots/token/token-color-indicator-tr.png)
+![Token Yönetim Paneli](images/screenshots/token/token-manager-panel-tr.png)
+![Token Renk Göstergesi](images/screenshots/token/token-color-indicator-tr.png)
 
 ### Akıllı API Geçmişi
 **Temel Özellikler:**
@@ -38,8 +38,8 @@ SwaggerProPlus, Swagger UI'ya akıllı özellikler ekleyerek API deneyimini dön
 - **Daha Hızlı Test**: Önceki başarılı istekleri yeniden kullanma
 - **Yüksek Verimlilik**: API test ve geliştirmede %50 zaman tasarrufu
 
-![İstek Geçmiş Paneli](/docs/images/screenshots/history/request-history-panel-tr.png)
-![İstek Parametreleri](/docs/images/screenshots/history/request-parameters-tr.png)
+![İstek Geçmiş Paneli](images/screenshots/history/request-history-panel-en.png)
+![İstek Parametreleri](images/screenshots/history/request-parameters-tr.png)
 
 ### Hızlı Servis Erişimi
 **Temel Özellikler:**
@@ -52,8 +52,8 @@ SwaggerProPlus, Swagger UI'ya akıllı özellikler ekleyerek API deneyimini dön
 - **Daha Akıcı İş Akışı**: Sık kullanılan API'lere anında erişim
 - **Artırılmış Verimlilik**: API erişiminde %45 zaman tasarrufu
 
-![Son Servisler Listesi](/docs/images/screenshots/services/recent-services-list-tr.png)
-![Servis Gezinme](/docs/images/screenshots/services/service-navigation-tr.png)
+![Son Servisler Listesi](images/screenshots/services/recent-services-list-tr.png)
+![Servis Gezinme](images/screenshots/services/service-navigation-en.png)
 
 ### Çok Dilli Arayüz
 **Temel Özellikler:**
@@ -66,8 +66,7 @@ SwaggerProPlus, Swagger UI'ya akıllı özellikler ekleyerek API deneyimini dön
 - **Gelişmiş Kullanıcı Deneyimi**: Ana dilde arayüz kullanımı
 - **Esneklik**: Eğitim ve dokümantasyonda %40 zaman tasarrufu
 
-![Dil Seçimi](/docs/images/screenshots/language/language-dropdown-tr.png)
-![RTL Arayüzü](/docs/images/screenshots/language/interface-rtl-tr.png)
+![Dil Seçimi](images/screenshots/language/language-dropdown-en.png)
 
 ## Kurulum ve Ayarlar ⚡️
 
@@ -89,7 +88,7 @@ src/main/resources/
 │   └── sw-pro.html            # Ana sayfa
 ```
 
-![Proje Yapısı](/docs/images/screenshots/setup/file-structure-tr.png)
+![Proje Yapısı](images/screenshots/setup/file-structure-tr.png)
 
 ### Adım 3: Spring Boot Yapılandırması
 `application.properties` veya `application.yml` dosyasını oluşturun:
@@ -105,14 +104,14 @@ springdoc.swagger-ui.enabled=true
 springdoc.api-docs.enabled=true
 ```
 
-![Spring Yapılandırması](/docs/images/screenshots/setup/spring-config-tr.png)
+![Spring Yapılandırması](images/screenshots/setup/spring-config-tr.png)
 
 ### Adım 4: Başlatma
 1. Spring Boot projesini çalıştırın
 2. `http://patoghjobs.com:8088/sw-pro.html` adresine gidin
 3. Yeni özellikleri olan Swagger UI'ı göreceksiniz
 
-![Başarılı Kurulum](/docs/images/screenshots/setup/successful-setup-tr.png)
+![Başarılı Kurulum](images/screenshots/setup/successful-setup-tr.png)
 
 ## Kullanım Kılavuzu 📚
 
@@ -125,31 +124,23 @@ springdoc.api-docs.enabled=true
 3. Token'lar farklı renklerle kaydedilir
 4. Token'ı etkinleştirmek için "Kullan"a tıklayın
 
-![Token Oluşturma Formu](/docs/images/screenshots/token/token-creation-form-tr.png)
-![Token Liste Görünümü](/docs/images/screenshots/token/token-list-view-tr.png)
 
 ### İstek Geçmişi
 - Geçmiş her API için otomatik olarak kaydedilir
 - Parametreleri geri yüklemek için zaman damgasına tıklayın
 - Geçmişten silmek için "Sil"e çift tıklayın
 
-![Geçmiş Silme](/docs/images/screenshots/history/history-deletion-tr.png)
-![Geçmiş Geri Yükleme](/docs/images/screenshots/history/history-restore-tr.png)
 
 ### Son Servisler
 - Beş son API listesi altta gösterilir
 - Hızlı erişim için "Git"e tıklayın
 - Servisler kullanıma göre sıralanır
 
-![Servis Yönetimi](/docs/images/screenshots/services/service-management-tr.png)
-![Servis Vurgulama](/docs/images/screenshots/services/service-highlight-tr.png)
 
 ### Dil Değişiklikleri
 - Sayfanın üstündeki dil açılır menüsünü kullanın
 - Ayarlar otomatik olarak kaydedilir
 
-![Dil Değiştirme](/docs/images/screenshots/language/language-switch-tr.png)
-![LTR Arayüzü](/docs/images/screenshots/language/interface-ltr-tr.png)
 
 ## Sorun Giderme 🔧
 

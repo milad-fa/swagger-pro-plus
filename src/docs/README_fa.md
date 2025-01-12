@@ -24,8 +24,8 @@ SwaggerProPlus با افزودن ویژگی‌های هوشمند به Swagger U
 - **مدیریت بهتر**: تفکیک واضح محیط‌های کاری و جلوگیری از اشتباهات ناخواسته
 - **صرفه‌جویی در زمان**: کاهش ۶۰٪ در زمان مدیریت و تعویض توکن‌ها
 
-![پنل مدیریت توکن](/docs/images/screenshots/token/token-manager-panel-fa.png)
-![نشانگر رنگی توکن](/docs/images/screenshots/token/token-color-indicator-fa.png)
+![پنل مدیریت توکن](images/screenshots/token/token-manager-panel-fa.png)
+![نشانگر رنگی توکن](images/screenshots/token/token-color-indicator-fa.png)
 
 ### تاریخچه هوشمند API
 **ویژگی‌های کلیدی:**
@@ -38,8 +38,8 @@ SwaggerProPlus با افزودن ویژگی‌های هوشمند به Swagger U
 - **تست سریع‌تر**: استفاده مجدد از درخواست‌های موفق قبلی
 - **بهره‌وری بالاتر**: کاهش ۵۰٪ در زمان تست و توسعه API
 
-![پنل تاریخچه درخواست‌ها](/docs/images/screenshots/history/request-history-panel-fa.png)
-![پارامترهای درخواست](/docs/images/screenshots/history/request-parameters-fa.png)
+![پنل تاریخچه درخواست‌ها](images/screenshots/history/request-history-panel-en.png)
+![پارامترهای درخواست](images/screenshots/history/request-parameters-fa.png)
 
 ### دسترسی سریع به سرویس‌ها
 **ویژگی‌های کلیدی:**
@@ -52,8 +52,8 @@ SwaggerProPlus با افزودن ویژگی‌های هوشمند به Swagger U
 - **گردش کار روان‌تر**: دسترسی فوری به API‌های پرکاربرد
 - **کارایی بیشتر**: کاهش ۴۵٪ در زمان دسترسی به API‌ها
 
-![لیست سرویس‌های اخیر](/docs/images/screenshots/services/recent-services-list-fa.png)
-![پیمایش سرویس](/docs/images/screenshots/services/service-navigation-fa.png)
+![لیست سرویس‌های اخیر](images/screenshots/services/recent-services-list-fa.png)
+![پیمایش سرویس](images/screenshots/services/service-navigation-en.png)
 
 ### رابط کاربری چندزبانه
 **ویژگی‌های کلیدی:**
@@ -66,8 +66,7 @@ SwaggerProPlus با افزودن ویژگی‌های هوشمند به Swagger U
 - **تجربه کاربری بهتر**: استفاده از رابط کاربری به زبان مادری
 - **انعطاف‌پذیری**: کاهش ۴۰٪ در زمان آموزش و مستندسازی
 
-![انتخاب زبان](/docs/images/screenshots/language/language-dropdown-fa.png)
-![رابط راست به چپ](/docs/images/screenshots/language/interface-rtl-fa.png)
+![انتخاب زبان](images/screenshots/language/language-dropdown-en.png)
 
 ## نصب و راه‌اندازی ⚡️
 
@@ -89,7 +88,7 @@ src/main/resources/
 │   └── sw-pro.html            # صفحه اصلی
 ```
 
-![ساختار پروژه](/docs/images/screenshots/setup/file-structure-fa.png)
+![ساختار پروژه](images/screenshots/setup/file-structure-fa.png)
 
 ### گام 3: تنظیمات Spring Boot
 فایل `application.properties` یا `application.yml` را با تنظیمات زیر ایجاد کنید:
@@ -105,14 +104,14 @@ springdoc.swagger-ui.enabled=true
 springdoc.api-docs.enabled=true
 ```
 
-![تنظیمات اسپرینگ](/docs/images/screenshots/setup/spring-config-fa.png)
+![تنظیمات اسپرینگ](images/screenshots/setup/spring-config-fa.png)
 
 ### گام 4: راه‌اندازی
 1. پروژه Spring Boot را اجرا کنید
 2. به آدرس `http://patoghjobs.com:8088/sw-pro.html` مراجعه کنید
 3. صفحه Swagger UI با قابلیت‌های جدید را مشاهده خواهید کرد
 
-![راه‌اندازی موفق](/docs/images/screenshots/setup/successful-setup-fa.png)
+![راه‌اندازی موفق](images/screenshots/setup/successful-setup-fa.png)
 
 ## راهنمای استفاده 📚
 
@@ -125,31 +124,23 @@ springdoc.api-docs.enabled=true
 3. توکن‌ها با رنگ‌های متفاوت ذخیره می‌شوند
 4. برای استفاده از هر توکن، روی دکمه "استفاده" کلیک کنید
 
-![فرم ایجاد توکن](/docs/images/screenshots/token/token-creation-form-fa.png)
-![نمایش لیست توکن‌ها](/docs/images/screenshots/token/token-list-view-fa.png)
 
 ### تاریخچه درخواست‌ها
 - تاریخچه به صورت خودکار برای هر API ذخیره می‌شود
 - برای بازیابی پارامترها، روی زمان درخواست کلیک کنید
 - برای حذف از تاریخچه، دکمه "حذف" را دوبار کلیک کنید
 
-![حذف از تاریخچه](/docs/images/screenshots/history/history-deletion-fa.png)
-![بازیابی تاریخچه](/docs/images/screenshots/history/history-restore-fa.png)
 
 ### سرویس‌های اخیر
 - لیست پنج API اخیر در پایین صفحه نمایش داده می‌شود
 - برای دسترسی سریع، روی "برو" کلیک کنید
 - سرویس‌ها به ترتیب استفاده مرتب می‌شوند
 
-![مدیریت سرویس](/docs/images/screenshots/services/service-management-fa.png)
-![نشانگر سرویس](/docs/images/screenshots/services/service-highlight-fa.png)
 
 ### تغییر زبان
 - از منوی کشویی زبان در بالای صفحه استفاده کنید
 - تنظیمات زبان به صورت خودکار ذخیره می‌شود
 
-![تغییر زبان](/docs/images/screenshots/language/language-switch-fa.png)
-![رابط چپ به راست](/docs/images/screenshots/language/interface-ltr-fa.png)
 
 ## رفع مشکلات رایج 🔧
 

@@ -28,8 +28,8 @@ SwaggerProPlus revolutionizes API interaction by adding intelligent features to 
 - **Better Management**: Clear separation of environments prevents accidental usage
 - **Time Savings**: 60% reduction in token management and switching time
 
-![Token Management Panel](/images/screenshots/token/token-manager-panel-en.png)
-![Token Color Indicators](/images/screenshots/token/token-color-indicator-en.png)
+![Token Management Panel](images/screenshots/token/token-manager-panel-en.png)
+![Token Color Indicators](images/screenshots/token/token-color-indicator-en.png)
 
 ### Smart API History
 
@@ -45,8 +45,8 @@ SwaggerProPlus revolutionizes API interaction by adding intelligent features to 
 - **Faster Testing**: Reuse successful previous requests
 - **Higher Productivity**: 50% reduction in API testing and development time
 
-![Request History Panel](/images/screenshots/history/request-history-panel-en.png)
-![Request Parameters](/images/screenshots/history/request-parameters-en.png)
+![Request History Panel](images/screenshots/history/request-history-panel-en.png)
+![Request Parameters](images/screenshots/history/request-parameters-en.png)
 
 ### Quick Service Access
 
@@ -62,8 +62,8 @@ SwaggerProPlus revolutionizes API interaction by adding intelligent features to 
 - **Smoother Workflow**: Instant access to frequently used APIs
 - **Increased Efficiency**: 45% reduction in API access time
 
-![Recent Services List](/images/screenshots/services/recent-services-list-en.png)
-![Service Navigation](/images/screenshots/services/service-navigation-en.png)
+![Recent Services List](images/screenshots/services/recent-services-list-en.png)
+![Service Navigation](images/screenshots/services/service-navigation-en.png)
 
 ### Multilingual Interface
 
@@ -79,7 +79,7 @@ SwaggerProPlus revolutionizes API interaction by adding intelligent features to 
 - **Improved UX**: Native language interface usage
 - **Flexibility**: 40% reduction in training and documentation time
 
-![Language Selection](/images/screenshots/language/language-dropdown-en.png)
+![Language Selection](images/screenshots/language/language-dropdown-en.png)
 
 ## Installation & Setup ⚡️
 

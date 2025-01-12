@@ -26,8 +26,8 @@
 - **إدارة أفضل**: فصل واضح لبيئات العمل
 - **توفير الوقت**: تقليل وقت إدارة وتبديل الرموز بنسبة 60٪
 
-![لوحة إدارة الرموز](/docs/images/screenshots/token/token-manager-panel-ar.png)
-![مؤشر لون الرمز](/docs/images/screenshots/token/token-color-indicator-ar.png)
+![لوحة إدارة الرموز](images/screenshots/token/token-manager-panel-ar.png)
+![مؤشر لون الرمز](images/screenshots/token/token-color-indicator-ar.png)
 
 ### سجل API ذكي
 **الميزات الرئيسية:**
@@ -40,8 +40,8 @@
 - **اختبار أسرع**: إعادة استخدام الطلبات الناجحة السابقة
 - **إنتاجية أعلى**: تقليل وقت اختبار وتطوير API بنسبة 50٪
 
-![لوحة سجل الطلبات](/docs/images/screenshots/history/request-history-panel-ar.png)
-![معلمات الطلب](/docs/images/screenshots/history/request-parameters-ar.png)
+![لوحة سجل الطلبات](images/screenshots/history/request-history-panel-en.png)
+![معلمات الطلب](images/screenshots/history/request-parameters-ar.png)
 
 ### وصول سريع للخدمات
 **الميزات الرئيسية:**
@@ -54,8 +54,8 @@
 - **سير عمل أكثر سلاسة**: وصول فوري إلى واجهات API الأكثر استخداماً
 - **كفاءة متزايدة**: تقليل وقت الوصول إلى API بنسبة 45٪
 
-![قائمة الخدمات الأخيرة](/docs/images/screenshots/services/recent-services-list-ar.png)
-![التنقل بين الخدمات](/docs/images/screenshots/services/service-navigation-ar.png)
+![قائمة الخدمات الأخيرة](images/screenshots/services/recent-services-list-ar.png)
+![التنقل بين الخدمات](images/screenshots/services/service-navigation-en.png)
 
 ### واجهة متعددة اللغات
 **الميزات الرئيسية:**
@@ -68,8 +68,7 @@
 - **تجربة مستخدم محسنة**: استخدام الواجهة باللغة الأم
 - **مرونة**: تقليل وقت التدريب والتوثيق بنسبة 40٪
 
-![اختيار اللغة](/docs/images/screenshots/language/language-dropdown-ar.png)
-![واجهة RTL](/docs/images/screenshots/language/interface-rtl-ar.png)
+![اختيار اللغة](images/screenshots/language/language-dropdown-en.png)
 
 ## التثبيت والإعداد ⚡️
 
@@ -94,7 +93,7 @@ src/main/resources/
 ```
 </div>
 
-![هيكل المشروع](/docs/images/screenshots/setup/file-structure-ar.png)
+![هيكل المشروع](images/screenshots/setup/file-structure-ar.png)
 
 ### الخطوة 3: إعداد Spring Boot
 قم بإنشاء ملف `application.properties` أو `application.yml`:
@@ -113,14 +112,14 @@ springdoc.api-docs.enabled=true
 ```
 </div>
 
-![إعدادات Spring](/docs/images/screenshots/setup/spring-config-ar.png)
+![إعدادات Spring](images/screenshots/setup/spring-config-ar.png)
 
 ### الخطوة 4: التشغيل
 1. قم بتشغيل مشروع Spring Boot
 2. انتقل إلى `http://patoghjobs.com:8088/sw-pro.html`
 3. ستشاهد Swagger UI مع الميزات الجديدة
 
-![إعداد ناجح](/docs/images/screenshots/setup/successful-setup-ar.png)
+![إعداد ناجح](images/screenshots/setup/successful-setup-ar.png)
 
 ## دليل الاستخدام 📚
 
@@ -133,31 +132,23 @@ springdoc.api-docs.enabled=true
 3. يتم حفظ الرموز بألوان مختلفة
 4. انقر على "استخدام" لتفعيل الرمز
 
-![نموذج إنشاء الرمز](/docs/images/screenshots/token/token-creation-form-ar.png)
-![عرض قائمة الرموز](/docs/images/screenshots/token/token-list-view-ar.png)
 
 ### سجل الطلبات
 - يتم حفظ السجل تلقائياً لكل API
 - انقر على الطابع الزمني لاستعادة المعلمات
 - انقر مرتين على "حذف" للإزالة من السجل
 
-![حذف من السجل](/docs/images/screenshots/history/history-deletion-ar.png)
-![استعادة السجل](/docs/images/screenshots/history/history-restore-ar.png)
 
 ### الخدمات الأخيرة
 - يتم عرض قائمة بآخر خمس واجهات API في الأسفل
 - انقر على "ذهاب" للوصول السريع
 - يتم ترتيب الخدمات حسب الاستخدام
 
-![إدارة الخدمات](/docs/images/screenshots/services/service-management-ar.png)
-![تمييز الخدمة](/docs/images/screenshots/services/service-highlight-ar.png)
 
 ### تغيير اللغة
 - استخدم القائمة المنسدلة للغات في أعلى الصفحة
 - يتم حفظ الإعدادات تلقائياً
 
-![تبديل اللغة](/docs/images/screenshots/language/language-switch-ar.png)
-![واجهة LTR](/docs/images/screenshots/language/interface-ltr-ar.png)
 
 ## استكشاف الأخطاء وإصلاحها 🔧
 

@@ -24,8 +24,8 @@ SwaggerProPlus Swagger UI-yə intellektual xüsusiyyətlər əlavə edərək API
 - **Daha Yaxşı İdarəetmə**: İş mühitlərinin aydın ayrılması
 - **Vaxt Qənaəti**: Token idarəetməsində 60% vaxt qənaəti
 
-![Token İdarəetmə Paneli](/docs/images/screenshots/token/token-manager-panel-az.png)
-![Token Rəng İndikatoru](/docs/images/screenshots/token/token-color-indicator-az.png)
+![Token İdarəetmə Paneli](images/screenshots/token/token-manager-panel-az.png)
+![Token Rəng İndikatoru](images/screenshots/token/token-color-indicator-az.png)
 
 ### Ağıllı API Tarixçəsi
 **Əsas Xüsusiyyətlər:**
@@ -38,8 +38,8 @@ SwaggerProPlus Swagger UI-yə intellektual xüsusiyyətlər əlavə edərək API
 - **Daha Sürətli Test**: Əvvəlki uğurlu sorğulardan yenidən istifadə
 - **Yüksək Məhsuldarlıq**: API test və inkişafında 50% vaxt qənaəti
 
-![Sorğu Tarixçəsi Paneli](/docs/images/screenshots/history/request-history-panel-az.png)
-![Sorğu Parametrləri](/docs/images/screenshots/history/request-parameters-az.png)
+![Sorğu Tarixçəsi Paneli](images/screenshots/history/request-history-panel-en.png)
+![Sorğu Parametrləri](images/screenshots/history/request-parameters-az.png)
 
 ### Sürətli Servis Girişi
 **Əsas Xüsusiyyətlər:**
@@ -52,8 +52,8 @@ SwaggerProPlus Swagger UI-yə intellektual xüsusiyyətlər əlavə edərək API
 - **Daha Səlis İş Axını**: Tez-tez istifadə edilən API-lərə ani giriş
 - **Artırılmış Effektivlik**: API girişində 45% vaxt qənaəti
 
-![Son Servislər Siyahısı](/docs/images/screenshots/services/recent-services-list-az.png)
-![Servis Naviqasiyası](/docs/images/screenshots/services/service-navigation-az.png)
+![Son Servislər Siyahısı](images/screenshots/services/recent-services-list-az.png)
+![Servis Naviqasiyası](images/screenshots/services/service-navigation-en.png)
 
 ### Çoxdilli İnterfeys
 **Əsas Xüsusiyyətlər:**
@@ -66,8 +66,7 @@ SwaggerProPlus Swagger UI-yə intellektual xüsusiyyətlər əlavə edərək API
 - **Təkmilləşdirilmiş İstifadəçi Təcrübəsi**: Ana dildə interfeys istifadəsi
 - **Çeviklik**: Təlim və sənədləşdirmədə 40% vaxt qənaəti
 
-![Dil Seçimi](/docs/images/screenshots/language/language-dropdown-az.png)
-![RTL İnterfeysi](/docs/images/screenshots/language/interface-rtl-az.png)
+![Dil Seçimi](images/screenshots/language/language-dropdown-en.png)
 
 ## Quraşdırma və Tənzimləmə ⚡️
 
@@ -89,7 +88,7 @@ src/main/resources/
 │   └── sw-pro.html            # Əsas səhifə
 ```
 
-![Layihə Strukturu](/docs/images/screenshots/setup/file-structure-az.png)
+![Layihə Strukturu](images/screenshots/setup/file-structure-az.png)
 
 ### Addım 3: Spring Boot Tənzimləmələri
 `application.properties` və ya `application.yml` faylını yaradın:
@@ -105,14 +104,14 @@ springdoc.swagger-ui.enabled=true
 springdoc.api-docs.enabled=true
 ```
 
-![Spring Tənzimləmələri](/docs/images/screenshots/setup/spring-config-az.png)
+![Spring Tənzimləmələri](images/screenshots/setup/spring-config-az.png)
 
 ### Addım 4: Başladın
 1. Spring Boot layihəsini işə salın
 2. `http://patoghjobs.com:8088/sw-pro.html` ünvanına daxil olun
 3. Yeni xüsusiyyətləri olan Swagger UI-ni görəcəksiniz
 
-![Uğurlu Quraşdırma](/docs/images/screenshots/setup/successful-setup-az.png)
+![Uğurlu Quraşdırma](images/screenshots/setup/successful-setup-az.png)
 
 ## İstifadə Təlimatı 📚
 
@@ -125,31 +124,23 @@ springdoc.api-docs.enabled=true
 3. Tokenlər müxtəlif rənglərlə yadda saxlanılır
 4. Tokeni aktivləşdirmək üçün "İstifadə" düyməsinə klikləyin
 
-![Token Yaratma Forması](/docs/images/screenshots/token/token-creation-form-az.png)
-![Token Siyahı Görünüşü](/docs/images/screenshots/token/token-list-view-az.png)
 
 ### Sorğu Tarixçəsi
 - Tarixçə hər API üçün avtomatik olaraq yadda saxlanılır
 - Parametrləri bərpa etmək üçün vaxt möhürünə klikləyin
 - Tarixçədən silmək üçün "Sil" düyməsinə iki dəfə klikləyin
 
-![Tarixçə Silmə](/docs/images/screenshots/history/history-deletion-az.png)
-![Tarixçə Bərpası](/docs/images/screenshots/history/history-restore-az.png)
 
 ### Son Servislər
 - Beş son API siyahısı aşağıda göstərilir
 - Sürətli giriş üçün "Get" düyməsinə klikləyin
 - Servislər istifadəyə görə sıralanır
 
-![Servis İdarəetməsi](/docs/images/screenshots/services/service-management-az.png)
-![Servis Vurğulaması](/docs/images/screenshots/services/service-highlight-az.png)
 
 ### Dil Dəyişiklikləri
 - Səhifənin yuxarısındakı dil açılan menyusundan istifadə edin
 - Tənzimləmələr avtomatik yadda saxlanılır
 
-![Dil Dəyişmə](/docs/images/screenshots/language/language-switch-az.png)
-![LTR İnterfeysi](/docs/images/screenshots/language/interface-ltr-az.png)
 
 ## Problemlərin Həlli 🔧
 
